@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Form</h2>
+        <form method="post">
+            {% csrf_token %}
+            
+            <label for="firstname">First Name:</label>
+            {{ form.first_name }}
+
+            <label for="lastname">Last Name:</label>
+            {{ form.last_name }}
+
+            <label for="username">Username:</label>
+            {{ form.username }}
+            
+            <label for="email">Email:</label>
+            {{ form.email }}
+
+            <label for="password">Password:</label>
+            {{form.password}}
+
+
+            <label for="id_team">Team:</label>
+            {{ form.team }}
+
+            <label for="id_role">Role:</label>
+            <select id="id_role" name="role">
+                <option value="">Select a role</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    {% load static %}  <!-- Load the static template tag -->
+
+    <script src="{% static 'utils.js' %}"></script>
+
+    <script>
+        populateRoles();
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+    "HR": [
+        "HR Manager", "Senior HR Specialist", "HR Specialist", 
+        "Associate HR Specialist", "Recruiter", "Junior Recruiter", 
+        "Talent Acquisition Specialist", "HR Coordinator"
+    ],
+    "Admin": [
+        "Office Manager", "Senior Administrative Assistant", "Administrative Assistant", 
+        "Junior Administrative Assistant", "Executive Assistant", "Office Coordinator"
+    ],
+    "Executives": [
+        "CEO", "CTO", "CFO", "COO", "Director", "Associate Director"
+    ],
+    "Design": [
+        "Lead UI/UX Designer", "Senior UI/UX Designer", "UI/UX Designer", 
+        "Junior UI/UX Designer", "Product Designer", "Senior Graphic Designer", 
+        "Junior Graphic Designer", "Visual Designer"
+    ],
+    "Frontend": [
+        "Lead Frontend Developer", "Senior Frontend Developer", "Frontend Developer", 
+        "Associate Frontend Developer", "Junior Frontend Developer"
+    ],
+    "Backend": [
+        "Lead Backend Developer", "Senior Backend Developer", "Backend Developer", 
+        "Associate Backend Developer", "Junior Backend Developer"
+    ],
+    "DevOps": [
+        "Lead DevOps Engineer", "Senior DevOps Engineer", "Junior DevOps Engineer", 
+        "Cloud Architect", "Cloud Engineer", "System Administrator"
+    ],
+    "ML/AI": [
+        "Lead Data Scientist", "Senior ML Engineer", "Associate ML Engineer", 
+        "Data Engineer", "Data Scientist", "AI Researcher"
+    ],
+    "QA": [
+        "Lead QA Engineer", "Senior QA Engineer", "Associate QA Engineer", 
+        "Junior QA Engineer"
+    ]
+}
