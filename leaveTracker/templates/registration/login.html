@@ -1,0 +1,51 @@
+{% load static %}  <!-- Load the static template tag -->
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Form</h2>
+        <form method="post" action="{% url 'login' %}" novalidate>
+            {% csrf_token %}
+            
+            {{ form.username|as_crispy_field }}
+            {{ form.password|as_crispy_field }}
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    {% if messages %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Something went wrong!',
+                            text: '{{ message }}',
+                            confirmButtonText: 'OK',
+                        });
+                    {% elif message.tags == 'success' %}
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: '{{ message }}',
+                            confirmButtonText: 'OK',
+                        });
+                    {% endif %}
+                {% endfor %}
+            });
+        </script>
+    {% endif %}
+
+</body>
+</html>
